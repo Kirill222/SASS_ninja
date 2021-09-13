@@ -31,4 +31,14 @@
             background-color: $val;
         }
     }
+
+    .btn-complement-#{$key} {
+        @include btn($val);            //we can pass values into mixins
+        color: light-comp($val);
+        &:hover {
+            color: $val;
+            background-color: light-comp($val);
+        }
+        
+    }
 }
